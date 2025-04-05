@@ -2,17 +2,12 @@ import { BrowserProvider } from "ethers";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-interface HomeType {
-  image: string;
-  address: string;
-  attributes: { trait_type: string; value: string | number }[];
-}
 interface HomeProps {
   home: any;
   provider: BrowserProvider;
   account: string | null;
   escrow: any;
-  togglePop: (selectedHome: HomeType) => void;
+  togglePop: () => void;
 }
 
 const Home: React.FC<HomeProps> = ({
