@@ -32,7 +32,7 @@ const App: React.FC = () => {
   const loadBlockchainData = async () => {
     if (!window.ethereum) return;
 
-    const providerInstance = new ethers.JsonRpcProvider(window?.ethereum);
+    const providerInstance = new ethers.JsonRpcProvider(window.ethereum);
     setProvider(providerInstance);
 
     const network = await providerInstance.getNetwork();
